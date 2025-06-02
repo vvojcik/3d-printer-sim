@@ -216,7 +216,7 @@ def main():
                     try:
                         cmd = next(generator)
                         if cmd[0] == "SET_HEAD_X": nozzle_x_pos = cmd[1]
-                        elif cmd[0] == "SET_SUWAK_Y": gantry_y_pos = cmd[1]
+                        elif cmd[0] == "SET_GANTRY_Y": gantry_y_pos = cmd[1]  # <--- TUTAJ BYŁ BŁĄD, POPRAWIONE
                         elif cmd[0] == "LAYER_DOWN": bed_z_pos -= 0.02
                         elif cmd[0] == "PRINT_BLOCK": cubes.add(cmd[1])
                         elif cmd[0] == "FINISHED":
